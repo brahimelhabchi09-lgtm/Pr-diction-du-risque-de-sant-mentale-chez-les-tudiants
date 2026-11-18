@@ -1,0 +1,74 @@
+services:
+  api:
+    build:
+      context: .
+      target: application
+    command: uvicorn app.api:app --host 0.0.0.0 --port 8000
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./models:/project/models:ro
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  streamlit:
+    build:
+      context: .
+      target: application
+    command: streamlit run app/streamlit_app.py --server.address=0.0.0.0 --server.port=8501
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      API_URL: http://api:8000
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8501/_stcore/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    depends_on:
+      api:
+        condition: service_healthy
+
+  airflow:
+    build:
+      context: .
+      target: airflow
+    command: bash -c "rm -f /opt/airflow/airflow-webserver.pid && exec airflow standalone"
+    user: "${AIRFLOW_UID:-1000}:0"
+    ports:
+      - "127.0.0.1:8080:8080"
+    environment:
+      AIRFLOW__CORE__EXECUTOR: SequentialExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__DAGS_FOLDER: /project/dag
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "false"
+      AIRFLOW__CORE__DEFAULT_TIMEZONE: Africa/Casablanca
+      AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: "30"
+    volumes:
+      - airflow_state:/opt/airflow
+      - ./dag:/project/dag:ro
+      - ./data/raw:/project/data/raw:ro
+      - ./data/processed:/project/data/processed
+      - ./models:/project/models
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import json,urllib.request; d=json.load(urllib.request.urlopen('http://localhost:8080/health', timeout=5)); assert d['metadatabase']['status']=='healthy' and d['scheduler']['status']=='healthy'"
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+volumes:
+  airflow_state:
