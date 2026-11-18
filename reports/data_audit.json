@@ -1,0 +1,222 @@
+{
+  "rows": 2000,
+  "columns": 17,
+  "sha256": "b85c714ae61146d0045bd929bbed4f33b517a5cba5664b5213adeacf58581cc4",
+  "dtypes": {
+    "Student_ID": "str",
+    "Age": "int64",
+    "Gender": "str",
+    "Year_of_Study": "int64",
+    "Sleep_Hours": "float64",
+    "Study_Hours_Per_Week": "float64",
+    "GPA": "float64",
+    "Social_Media_Hours": "float64",
+    "Screen_Time_Hours": "float64",
+    "Physical_Activity": "str",
+    "Financial_Stress": "float64",
+    "Family_Support": "float64",
+    "Attendance_Rate": "float64",
+    "Part_Time_Job": "str",
+    "Diet_Quality": "str",
+    "Previous_Mental_Health_History": "str",
+    "Mental_Health_Risk": "str"
+  },
+  "missing_counts": {
+    "Student_ID": 0,
+    "Age": 0,
+    "Gender": 0,
+    "Year_of_Study": 0,
+    "Sleep_Hours": 62,
+    "Study_Hours_Per_Week": 0,
+    "GPA": 38,
+    "Social_Media_Hours": 58,
+    "Screen_Time_Hours": 0,
+    "Physical_Activity": 0,
+    "Financial_Stress": 91,
+    "Family_Support": 54,
+    "Attendance_Rate": 47,
+    "Part_Time_Job": 0,
+    "Diet_Quality": 69,
+    "Previous_Mental_Health_History": 0,
+    "Mental_Health_Risk": 0
+  },
+  "missing_percent": {
+    "Student_ID": 0.0,
+    "Age": 0.0,
+    "Gender": 0.0,
+    "Year_of_Study": 0.0,
+    "Sleep_Hours": 3.1,
+    "Study_Hours_Per_Week": 0.0,
+    "GPA": 1.9,
+    "Social_Media_Hours": 2.9,
+    "Screen_Time_Hours": 0.0,
+    "Physical_Activity": 0.0,
+    "Financial_Stress": 4.55,
+    "Family_Support": 2.7,
+    "Attendance_Rate": 2.35,
+    "Part_Time_Job": 0.0,
+    "Diet_Quality": 3.45,
+    "Previous_Mental_Health_History": 0.0,
+    "Mental_Health_Risk": 0.0
+  },
+  "duplicate_rows": 0,
+  "duplicate_student_ids": 0,
+  "duplicate_features": 0,
+  "class_counts": {
+    "High": 680,
+    "Medium": 660,
+    "Low": 660
+  },
+  "categories": {
+    "Gender": {
+      "Female": 971,
+      "Male": 932,
+      "Non-binary": 97
+    },
+    "Physical_Activity": {
+      "Moderate": 906,
+      "Low": 679,
+      "High": 415
+    },
+    "Part_Time_Job": {
+      "No": 1289,
+      "Yes": 711
+    },
+    "Diet_Quality": {
+      "Average": 860,
+      "Poor": 587,
+      "Good": 484
+    },
+    "Previous_Mental_Health_History": {
+      "No": 1408,
+      "Yes": 592
+    }
+  },
+  "numeric_summary": {
+    "Age": {
+      "count": 2000.0,
+      "mean": 21.1315,
+      "std": 2.1392746429570466,
+      "min": 17.0,
+      "25%": 20.0,
+      "50%": 21.0,
+      "75%": 23.0,
+      "max": 29.0
+    },
+    "Year_of_Study": {
+      "count": 2000.0,
+      "mean": 2.63,
+      "std": 1.3168018011423532,
+      "min": 1.0,
+      "25%": 1.0,
+      "50%": 2.0,
+      "75%": 4.0,
+      "max": 5.0
+    },
+    "Sleep_Hours": {
+      "count": 1938.0,
+      "mean": 6.758875128998969,
+      "std": 1.1270715677973286,
+      "min": 3.3,
+      "25%": 6.0,
+      "50%": 6.7,
+      "75%": 7.6,
+      "max": 10.0
+    },
+    "Study_Hours_Per_Week": {
+      "count": 2000.0,
+      "mean": 19.9979,
+      "std": 5.719273610810875,
+      "min": 2.4,
+      "25%": 16.0,
+      "50%": 19.8,
+      "75%": 24.0,
+      "max": 38.3
+    },
+    "GPA": {
+      "count": 1962.0,
+      "mean": 2.5625025484199795,
+      "std": 0.34399282252931795,
+      "min": 1.5,
+      "25%": 2.32,
+      "50%": 2.56,
+      "75%": 2.79,
+      "max": 3.66
+    },
+    "Social_Media_Hours": {
+      "count": 1942.0,
+      "mean": 6.013954685890835,
+      "std": 1.1534219473241194,
+      "min": 2.1,
+      "25%": 5.225,
+      "50%": 6.0,
+      "75%": 6.7,
+      "max": 10.0
+    },
+    "Screen_Time_Hours": {
+      "count": 2000.0,
+      "mean": 8.5485,
+      "std": 1.6575709700523775,
+      "min": 3.3,
+      "25%": 7.4,
+      "50%": 8.5,
+      "75%": 9.7,
+      "max": 14.0
+    },
+    "Financial_Stress": {
+      "count": 1909.0,
+      "mean": 5.956259821896281,
+      "std": 1.8939406988109044,
+      "min": 1.4,
+      "25%": 4.5,
+      "50%": 6.1,
+      "75%": 7.4,
+      "max": 10.0
+    },
+    "Family_Support": {
+      "count": 1946.0,
+      "mean": 6.518345323741007,
+      "std": 1.844638597042227,
+      "min": 1.7,
+      "25%": 5.1,
+      "50%": 6.7,
+      "75%": 8.0,
+      "max": 9.9
+    },
+    "Attendance_Rate": {
+      "count": 1953.0,
+      "mean": 85.08023553507424,
+      "std": 7.224117773709758,
+      "min": 54.4,
+      "25%": 80.3,
+      "50%": 85.1,
+      "75%": 90.0,
+      "max": 100.0
+    }
+  },
+  "iqr_outlier_counts": {
+    "Age": 4,
+    "Year_of_Study": 0,
+    "Sleep_Hours": 2,
+    "Study_Hours_Per_Week": 7,
+    "GPA": 9,
+    "Social_Media_Hours": 20,
+    "Screen_Time_Hours": 7,
+    "Financial_Stress": 0,
+    "Family_Support": 0,
+    "Attendance_Rate": 12
+  },
+  "social_media_exceeds_screen_time": 37,
+  "invalid_domain_values": 0,
+  "decisions": [
+    "Preserve raw CSV unchanged; no duplicate or invalid-domain rows found.",
+    "Drop Student_ID (identifier) from the model.",
+    "Impute numeric medians and categorical modes inside each training fold.",
+    "Retain plausible IQR outliers: extreme sleep or stress values may carry label signal.",
+    "Do not force screen/social hours consistency: survey definitions are unspecified.",
+    "Use no resampling: classes are approximately balanced; select by macro F1.",
+    "Keep survey predictors, including previous history, to study the synthetic task only.",
+    "Labels are generated from weighted predictors plus noise; clinical validity cannot be inferred.",
+    "No direct target copy or post-outcome score column is present; generation code is unavailable."
+  ]
+}

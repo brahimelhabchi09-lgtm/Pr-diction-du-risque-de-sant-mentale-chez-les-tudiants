@@ -1,0 +1,53 @@
+{
+  "features": [
+    "Age",
+    "Year_of_Study",
+    "Sleep_Hours",
+    "Study_Hours_Per_Week",
+    "GPA",
+    "Social_Media_Hours",
+    "Screen_Time_Hours",
+    "Financial_Stress",
+    "Family_Support",
+    "Attendance_Rate",
+    "Gender",
+    "Physical_Activity",
+    "Part_Time_Job",
+    "Diet_Quality",
+    "Previous_Mental_Health_History"
+  ],
+  "training_rows": 1600,
+  "numeric": [
+    "Age",
+    "Year_of_Study",
+    "Sleep_Hours",
+    "Study_Hours_Per_Week",
+    "GPA",
+    "Social_Media_Hours",
+    "Screen_Time_Hours",
+    "Financial_Stress",
+    "Family_Support",
+    "Attendance_Rate"
+  ],
+  "categorical": [
+    "Gender",
+    "Physical_Activity",
+    "Part_Time_Job",
+    "Diet_Quality",
+    "Previous_Mental_Health_History"
+  ],
+  "imputation": {
+    "numeric": "median",
+    "categorical": "most_frequent"
+  },
+  "encoding": "one-hot, handle_unknown=ignore",
+  "scaling": "StandardScaler",
+  "outliers": "Retain valid IQR extremes; reject impossible domains at ingestion.",
+  "imbalance": "No resampling: training classes 33%, 33%, 34%.",
+  "training_class_counts": {
+    "High": 544,
+    "Medium": 528,
+    "Low": 528
+  },
+  "leakage_control": "Definition is unfitted; fit complete pipeline inside each CV fold."
+}

@@ -1,0 +1,20 @@
+{
+  "raw_sha256": "b85c714ae61146d0045bd929bbed4f33b517a5cba5664b5213adeacf58581cc4",
+  "random_state": 42,
+  "test_size": 0.2,
+  "train_rows": 1600,
+  "test_rows": 400,
+  "train_class_counts": {
+    "High": 544,
+    "Medium": 528,
+    "Low": 528
+  },
+  "test_class_counts": {
+    "High": 136,
+    "Medium": 132,
+    "Low": 132
+  },
+  "overlapping_student_ids": 0,
+  "train_sha256": "db47c2c45f80f8e2c716ef7b5bcf44f4e720c3594604ca201682f753946619f4",
+  "test_sha256": "81a6e434269852ab6d18f05773b7c256d39887994b59dc65cd102d97a867b2fb"
+}

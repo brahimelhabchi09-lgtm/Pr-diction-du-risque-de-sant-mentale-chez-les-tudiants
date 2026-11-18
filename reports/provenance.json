@@ -1,0 +1,13 @@
+{
+  "source": "https://www.kaggle.com/datasets/maqdadali/mental-health-risk-prediction-dataset-students",
+  "filename": "student_mental_health.csv",
+  "sha256": "b85c714ae61146d0045bd929bbed4f33b517a5cba5664b5213adeacf58581cc4",
+  "bytes": 157026,
+  "version": 1,
+  "license": "CC0: Public Domain",
+  "source_last_updated": "2026-04-22T07:04:47.473Z",
+  "verified_date": "2026-11-09",
+  "synthetic": true,
+  "description": "## \ud83d\udccc Overview\nThis dataset simulates the mental health condition of university students based on academic, lifestyle, and socio-economic factors. It is designed for machine learning practitioners to explore and build models that predict mental health risk levels.\n\n## \ud83c\udfaf Objective\nThe goal is to predict the **Mental Health Risk Level** (Low, Medium, High) using various student-related attributes such as study habits, sleep patterns, stress levels, and social behavior.\n\n## \ud83c\udf0d Motivation\nMental health issues among students are increasing globally due to academic pressure, financial stress, and lifestyle imbalance. Early prediction systems can help institutions take preventive actions.\n\n## \ud83d\udcca Dataset Characteristics\n- Type: Tabular\n- Task: Classification\n- Rows: ~2000\n- Features: 12\u201315\n\n## \ud83d\udca1 Use Cases\n- Machine learning model training\n- Classification problem practice\n- Feature importance analysis\n- Educational projects",
+  "verification": "Fresh public Kaggle download matches the preserved local CSV byte for byte."
+}

@@ -1,0 +1,58 @@
+{
+  "method": "README Docker helper; preparation, preprocessing, comparison, optimization and evaluation in separate fresh containers; serving artifacts unchanged.",
+  "raw_sha256": "b85c714ae61146d0045bd929bbed4f33b517a5cba5664b5213adeacf58581cc4",
+  "original_model_sha256": "8944fb62039cb8bba714b6305c9bcee15532c87c9ec068e519ea258a0025243e",
+  "reproduced_model_sha256": "8944fb62039cb8bba714b6305c9bcee15532c87c9ec068e519ea258a0025243e",
+  "identical_model_bytes": true,
+  "identical_holdout_scores": true,
+  "identical_cv_comparison": true,
+  "identical_selection": true,
+  "holdout_scores": {
+    "accuracy": 0.755,
+    "precision_macro": 0.7539919607626212,
+    "recall_macro": 0.7543077837195483,
+    "f1_macro": 0.7541283894424246,
+    "f1_weighted": 0.7547622880297521,
+    "roc_auc_ovr": 0.9139192905791896,
+    "recall_high": 0.8235294117647058
+  },
+  "versions": {
+    "scikit-learn": "1.9.1",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "joblib": "1.6.0"
+  },
+  "dependency_checks": "No broken requirements found in API, Streamlit and isolated Airflow ML environment.",
+  "notebook": "All four notebooks executed in fresh kernels; see per-notebook counts.",
+  "no_test_files_or_frameworks_added": true,
+  "notebooks": {
+    "01_eda.ipynb": {
+      "code_cells": 6,
+      "executed_cells": 6,
+      "error_outputs": 0,
+      "embedded_plots": 6
+    },
+    "02_preprocessing.ipynb": {
+      "code_cells": 8,
+      "executed_cells": 8,
+      "error_outputs": 0,
+      "embedded_plots": 1
+    },
+    "03_model_training.ipynb": {
+      "code_cells": 9,
+      "executed_cells": 9,
+      "error_outputs": 0,
+      "embedded_plots": 1
+    },
+    "04_model_optimization_evaluation.ipynb": {
+      "code_cells": 12,
+      "executed_cells": 12,
+      "error_outputs": 0,
+      "embedded_plots": 3
+    }
+  },
+  "notebook_holdout_scores_match": true,
+  "notebook_classifier_parameters_match": true,
+  "notebook_classifier_max_coefficient_difference": 0.0,
+  "notebook_classifier_max_intercept_difference": 0.0
+}

@@ -1,0 +1,38 @@
+{
+  "dag_id": "student_mental_health_pipeline",
+  "run_id": "manual__delivery_20261109",
+  "state": "success",
+  "logical_date": "2026-11-09T14:36:31+00:00",
+  "started_at": "2026-11-09T14:36:32.171615+00:00",
+  "ended_at": "2026-11-09T14:36:57.172932+00:00",
+  "schedule": "0 2 * * *",
+  "timezone": "Africa/Casablanca",
+  "executor": "SequentialExecutor",
+  "tasks": [
+    {
+      "task": "prepare_data",
+      "state": "success",
+      "started_at": "2026-11-09T14:36:33.421319+00:00",
+      "ended_at": "2026-11-09T14:36:34.915804+00:00"
+    },
+    {
+      "task": "preprocess",
+      "state": "success",
+      "started_at": "2026-11-09T14:36:36.607752+00:00",
+      "ended_at": "2026-11-09T14:36:37.645290+00:00"
+    },
+    {
+      "task": "train_and_optimize",
+      "state": "success",
+      "started_at": "2026-11-09T14:36:39.119257+00:00",
+      "ended_at": "2026-11-09T14:36:52.202889+00:00"
+    },
+    {
+      "task": "evaluate_and_publish",
+      "state": "success",
+      "started_at": "2026-11-09T14:36:53.738596+00:00",
+      "ended_at": "2026-11-09T14:36:56.924439+00:00"
+    }
+  ],
+  "publication": "All four stages succeeded. Model checksum and metrics match the original independent run."
+}
